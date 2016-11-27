@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Stock Closures | Results by scraping</title>
+    <link href="https://fonts.googleapis.com/css?family=Dancing+Script|Pacifico|Montez|Lato" rel="stylesheet">
+</head>
+<style>
+
+    body{
+        font-family:lato;
+        padding:5em 5em;
+        box-sizing:border-box;
+    }
+
+    h1{
+        top:60%;
+        position:absolute;
+        width:80%;
+        left:10%;
+    }
+
+    span{
+        font-weight:bold;
+        font-size:2em;
+        font-family: dancing script;
+    }
+
+</style>
+<body>
+    <center>
+        <p>This is the website that scrapes Yahoo Finance and lets you know the closing stock value!</p>
+        <form action="" method="POST">
+
+            <p><input type="text" name="ticker" placeholder="Enter the company name here" /></p>
+            <p><input type="submit" value="Get the stock rate"></p>
+
+        </form>
+
+        {%if company and value%}
+            <h2>The stock value of <span>{{company}}</span> right now as per Yahoo Finance website is <br /><span>{{value}}</span>.</h2>
+        {%endif%}
+    </center>
+</body>
+</html>
